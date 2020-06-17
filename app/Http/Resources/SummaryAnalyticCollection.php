@@ -14,8 +14,8 @@ class SummaryAnalyticCollection extends ResourceCollection
      */
     public function toArray($request)
     {
+        // Builds Summary Analytics Report without additional requests to DB
         $result = [];
-
         foreach ($this->collection as $property) {
             foreach ($property->propertyAnalytics as $propertyAnalytics) {
                 if (!array_key_exists($propertyAnalytics->analyticType->id, $result)) {

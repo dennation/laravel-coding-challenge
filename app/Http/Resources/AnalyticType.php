@@ -14,6 +14,7 @@ class AnalyticType extends JsonResource
      */
     public function toArray($request)
     {
+        // Remove extra fields
         return [
             "id"                    => $this->id,
             "name"                  => $this->name,
